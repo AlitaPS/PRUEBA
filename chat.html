@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/b0d84ba12b.js" crossorigin="anonymous"></script>
+    <title>CHAT</title>
+</head>
+<body>
+
+            <!-- HEADER -->
+            <header class="plan-header">
+                <div class="plan-header-left">
+                    <a href="#" class="plan-button-link">
+                        <img src="img/logoA.jpg" alt="Logo">
+                    </a>
+                    <p id="plan-bienvenida-header"> Bienvenida <b>Marta Caballero</b></p>
+                    </div>
+                    <div class="plan-header-center">
+                        <h1>PLANOS</h1>
+                    </div>
+                    <div class="plan-header-right">
+                        <input type="text" placeholder="Buscar..." name="buscador" id="plan-buscar">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </div>
+                </header>
+                        <!-- FIN DEL HEADER -->
+
+                        <div class="container-planos-tercer-interfaz"> 
+                            <div class="container-div-superior">
+                              <button onclick="expandirDiv()"><i class="fa-solid fa-exclamation"></i></button>
+                              <div class="container-div-superior-btn-return"><button id="returnButton"><i class="fa-solid fa-rotate-left"></i></button></div>
+                            </div>
+
+                            <!-- CARRUSEL -->
+                            <div class="carrusel">
+                                <div class="wrapper">
+                                  <i id="left" class="fa-solid fa-angle-left"></i>
+                                  <div class="carousel">
+                                    <img src="https://pymstatic.com/100108/conversions/test-casa-wide.jpg" alt="img" draggable="false">
+                                    <img src="https://pymstatic.com/100108/conversions/test-casa-wide.jpg" alt="img" draggable="false">
+                                    <img src="https://pymstatic.com/100108/conversions/test-casa-wide.jpg" alt="img" draggable="false">
+                                    <img src="https://pymstatic.com/100108/conversions/test-casa-wide.jpg" alt="img" draggable="false">
+                                    <img src="https://pymstatic.com/100108/conversions/test-casa-wide.jpg" alt="img" draggable="false">
+                                    <img src="https://pymstatic.com/100108/conversions/test-casa-wide.jpg" alt="img" draggable="false">
+                                    <img src="https://pymstatic.com/100108/conversions/test-casa-wide.jpg" alt="img" draggable="false">
+                                    <img src="https://pymstatic.com/100108/conversions/test-casa-wide.jpg" alt="img" draggable="false">
+                                    <img src="https://pymstatic.com/100108/conversions/test-casa-wide.jpg" alt="img" draggable="false">
+                                  </div>
+                                  <i id="right" class="fa-solid fa-angle-right"></i>
+                                </div>
+                              </div>
+
+                              <div id="myModal-3" class="modal-3">
+                                <span class="close-3">&times;</span>
+                                <img class="modal-content-3" id="imgModal-3">
+                              </div>
+                            <!-- FIN DEL CARRUSEL -->
+
+                              <div id="miDiv" class="container-div-inferior-img"> 
+                                  <div class="container-div-inferior-imagenes">
+                                      <img src="img/user-icon-on-transparent-background-free-png.webp" alt="">
+                                      <img src="img/user-icon-on-transparent-background-free-png.webp" alt="">
+                                      <img src="img/user-icon-on-transparent-background-free-png.webp" alt="">
+                                      <img src="img/user-icon-on-transparent-background-free-png.webp" alt="">
+                                      <img src="img/user-icon-on-transparent-background-free-png.webp" alt="">
+                                      <img src="img/user-icon-on-transparent-background-free-png.webp" alt="">
+                                  </div>
+                                <div class="inf oculto">
+                                  <div class="inf-planos oculto">
+                                      <div class="info-planos-lista">
+                                     <i>  <p><b>Nombre:</b> Plano de construcción</p></i>
+                                     <i>  <p><b>Creado por:</b> Jonathan Solis</p></i>
+                                     <i>  <p><b>Fecha:</b> 16/11/2023</p></i>
+                                     <i>  <p><b>Folio:</b> 11-39710</p></i>
+                                   </div>
+                                  </div>
+                                </div>
+                                <div class="chat-user oculto">
+                                <div class="user oculto">
+                                  <div class="imagenes-user-oculto">
+                                      <img src="img/user-icon-on-transparent-background-free-png.webp" alt="">
+                                      <img src="img/user-icon-on-transparent-background-free-png.webp" alt="">
+                                      <img src="img/user-icon-on-transparent-background-free-png.webp" alt="">
+                                      <img src="img/user-icon-on-transparent-background-free-png.webp" alt="">
+                                      <img src="img/user-icon-on-transparent-background-free-png.webp" alt="">
+                                      <img src="img/user-icon-on-transparent-background-free-png.webp" alt="">
+                                  </div>
+                                </div>
+                                <div class="chat oculto">
+                                  <div class="chat-chat">
+                                      <img src="https://static.wikia.nocookie.net/amongus/images/2/29/Chat_interfaz.png/revision/latest?cb=20210516151555&path-prefix=es" alt="">
+                                  </div>
+                                </div>
+                              </div>
+                              </div>
+                          </div>
+    
+    <script src="chat.js"></script>
+</body>
+</html>

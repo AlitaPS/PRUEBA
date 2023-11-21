@@ -1,0 +1,1015 @@
+/* SELECTOR UNIVERSAL */
+* {
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #fffefe;
+    margin: 0;
+}
+
+/* ------------- HEADER -------------- */
+.plan-header-left p {
+    position: relative;
+    top: 40px;
+    font-size: 0.75rem;
+}
+
+.plan-header h1 {
+    font-size: 1.875rem;
+    text-shadow: 0px 0 6px #505050;
+    margin: 0;
+}
+
+.plan-header-left img {
+    width: 5rem;
+    margin-right: 1.25rem;
+}
+
+.plan-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+
+
+}
+
+.plan-header-left {
+    display: flex;
+    flex: 1;
+    padding-left: 0.625rem;
+}
+
+.plan-header-center {
+    flex: 2;
+    text-align: center;
+}
+
+.plan-header-right {
+    display: flex;
+    flex: 1;
+    padding-right: 0.625rem;
+    position: relative;
+    width: 18.75rem;
+}
+
+
+.plan-header-right input[type="text"] {
+    width: 100%;
+    height: 2.188rem;
+    padding: 0.625rem;
+    border-radius: 0.25rem;
+}
+
+.plan-header-right button[type="submit"] {
+    position: absolute;
+    right: 0.75rem;
+    top: 0.188rem;
+    padding: 0.313rem 0.625rem;
+    color: #000000;
+    border: none;
+    border-radius: 1.875rem;
+    cursor: pointer;
+    background: none;
+}
+
+#plan-buscar {
+    width: 100%;
+    border-radius: 0.938rem;
+    padding: 0.125rem;
+}
+
+/*---TERMINA HEADER----*/
+
+
+/* INICIO DE ESTRUCTURA DE PLANOS */
+.container-planos{
+    display: flex;
+    width: 100%;
+    height: 90.2vh;
+/*     background-color: red;
+ */}
+.container-users{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 5%;
+    height: 90.2vh;
+/*     background-color: aqua;
+ */}
+.container-modulo-planos{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    height: 86vh;
+    border-radius: 30px;
+    overflow-y: auto;
+/*     background-color: aquamarine;
+ */}
+.container-btn{
+    width: 5%;
+    height: 90.2vh;
+/*     background-color: lightgreen;
+ */}
+/* FIN DE ESTRUCTURA DE PLANOS */
+
+/* INICIO DE SEGMENTO DONDE SE ENCUENTRAN LOS USARIOS */
+.container-planos-users{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-bottom: 40px;
+    gap: 10px;
+}
+/* FIN DE SEGMENTO DONDE SE ENCUENTRAN LOS USARIOS */
+
+/* MODULOS CREADOS EN CARPETAS */
+.link-planos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #000000;
+    width: 100%;
+}
+
+.container-modulo-carpeta {
+    width: 90%; /* Tamaño fijo para los módulos */
+    height: 100px;
+    background: #363636;
+    color: #fffefe;
+    display: flex;
+    border-radius: 30px;
+    border: 1px solid black;
+    box-shadow: 2px 4px 6px black;
+    overflow: hidden;
+    position: relative;
+    margin: 10px;
+    flex-shrink: 0;
+}
+
+.container-modulo-titulo{
+    font-size: 25px;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.container-modulo-carpeta:hover article {
+    transform: perspective(250px) rotateX(10deg) translateY(-2%) translateZ(0);
+}
+
+.container-modulo-carpeta:hover article::before {
+    opacity: 1;
+}
+
+.container-modulo-carpeta:hover article img.close {
+    opacity: 0;
+}
+
+.container-modulo-carpeta:hover article img:last-child {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+article {
+    position: relative;
+    width: 100px;
+    transition: .4s ease-in-out;
+    padding: 10px;
+}
+
+article img {
+    border-radius: 4px;
+    object-fit: cover;
+    width: 100%;
+}
+
+article img:last-child {
+    position: absolute;
+    width: 85%;
+    bottom: 13px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0;
+}
+
+article::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+article:hover::before {
+    opacity: 1;
+}
+
+/* FIN DE MODULOS CREADOS EN CARPETAS */
+
+/*  AQUI ESTAN LOS BOTONES DE CREAR Y REGRESAR  */
+.container-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 40px;
+    gap: 10px;
+}
+.container-btn button{
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    background: #fffefe;
+    cursor: pointer;
+}
+
+/*  AQUI TERMINAN LOS BOTONES DE CREAR Y REGRESAR  */
+
+/* Estilos para la demostración, puedes ajustarlos según tus necesidades */
+.modal {
+    display: flex;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 50%;
+    height: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fffefe;
+    padding: 20px;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.cerrar {
+    color: #ff0000;
+    float: inline-end;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cerrar:hover {
+    color: black;
+}
+
+.container-btn-crearModulo{
+    border-radius: 10px;
+    width: 10vh;
+    height: 6vh;
+}
+
+.modal-content-btn-close{
+}
+
+.modal-content-inf{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-content-bienvenida{
+    padding: 20px   ;
+}
+
+.modal-content-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+}
+.modal-content-input input{
+    width: 90%;
+}
+
+.modal-content-btn{
+    display: flex;
+    justify-content: center;
+}
+.modal-content-btn button{
+    border: none;
+    background-color: #ff0000;
+    color: #fffefe;
+    box-shadow: 2px 6px 15px #000000;
+}
+.modal-content-btn button:hover{
+    box-shadow: -6px 27px 14px -17px rgba(255,255,255,1) inset ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* AQUI EMPIEZA LA SEGUNDA INTERFAZ PLANOS*/
+
+/* AQUI ESTA EL CONTENEDOR DE MODULOS */
+
+.container-document-planos{
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    height: 86vh;
+    border-radius: 30px;
+    overflow-y: auto;
+    flex-wrap: wrap;
+    gap: 10px;
+/*     background-color: aquamarine;
+ */ }
+
+ /* FIN DE EL CONTENEDOR DE MODULOS */
+
+/*  ESTILO DEL SEGUNDO MODAL */
+
+.modal-content-document{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 90%;
+
+}
+
+.modal-segundo-modal {
+    display: flex;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-contenido-planos {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 50%;
+    height: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.cerrar-planos {
+/*     background-color: lightgoldenrodyellow;
+ */    color: #ff0000;
+    float: inline-end;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    padding-left: 95%;
+}
+
+.cerrar-planos:hover {
+    color: black;
+}
+.modal-content-inf-planos{
+    display: flex;
+    justify-content: flex-end;
+/*     background-color: lightgray;
+ */}
+.modal-content-bienvenida-planos{
+    padding: 30px;
+/*     background-color: lightgreen;
+ */}
+.modal-content-nombre input{
+    width: 100%;
+/*     background-color: lightsalmon;
+ */}
+.modal-content-adjuntar input{
+    border-radius: 30px;
+    width: 100%;
+/*     background-color: lightseagreen;
+ */}
+.modal-content-btn-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+/*     background-color: lightgreen;
+ */}
+.modal-content-btn-2 button{
+    width: 30%;
+    height: 50%;
+    border-radius: 8px;
+    border: none;
+    background-color: #ff0000;
+    color: #fffefe;
+    box-shadow: 2px 6px 15px #000000;
+}
+.modal-content-btn-2 button:hover{
+    box-shadow: -6px 27px 14px -17px rgba(255,255,255,1) inset ;
+}
+
+/*  FIN DE LOS ESTILOS DEL SEGUNDO MODAL */
+
+/* ESTILOS DE LOS MODULOS CREADOS */
+
+.container-documente-modulo{
+   /* background-color: lightblue; */
+   border-radius: 30px;
+    border: 3px solid #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 300px;
+    box-shadow: -2px 240px 25px -4px rgba(0,0,0,0.25) inset,
+                0px 2px 1px 1px rgba(255,255,255,0.9) inset,
+                0px -2px 1px 0px rgba(0,0,0,0.25) inset;
+}
+
+.toggle-visibility {
+    margin-left: 200px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.container-document-eye {
+/*     background-color: lightgreen;
+ */    width: 90%;
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1; /* Ajustar la opacidad inicial */
+}
+
+.nieto img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.container-document-titulo {
+/*     background-color: lightpink;
+ */    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: none;
+    border: 2px solid #000;
+    border-top: none;
+    width: 105%;
+    height: 15%;
+    font-size: 15px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: 2px 76px 28px -50px rgba(255,255,255,1) inset,
+    0px -36px 30px 0px rgba(0,0,0,0.15) inset,
+    0px -79px 40px 0px rgba(0,0,0,0.1) inset,
+    0px 2px 1px 0px rgba(0,0,0,0.06),
+    0px 4px 2px 0px rgba(0,0,0,0.09),
+    0px 8px 4px 0px rgba(0,0,0,0.09),
+    0px 16px 8px 0px rgba(0,0,0,0.09);
+    background-color: #fffefe;
+}
+
+#conatiner-document-icon{
+    font-size: 150px;
+}
+.blurred {
+    filter: blur(5px); /* O el valor que desees */
+}
+/* FIN DE LOS ESTILOS DE LOS MODULOS CREADOS */
+
+/* LINK DE TERCERA INTERFAZ */
+.link-planos-3{
+    text-decoration: none;
+    color: #000;
+}
+/* FIN DE LINK DE TERCERA INTERFAZ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* AQUI EMPIEZA EL ESTILO DE LA 3 INTERFAZ */
+
+.container-planos-tercer-interfaz {
+    background-color: #363636;
+   height: 90.6vh;
+    overflow: hidden;
+}
+
+/* DIV INFERIOR */
+.container-div-superior{
+    box-shadow: 2px -17px 13px -20px rgba(255,255,255,1) inset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    width: 100%; /* Ancho inicial */
+    height: 10%; /* Altura inicial */
+    border-bottom-left-radius: 70% 17px; /* Cambio de bordes para expandir hacia arriba */
+    border-bottom-right-radius: 50% 17px; /* Cambio de bordes para expandir hacia arriba */
+
+}
+
+.container-div-superior button{
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #fff;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.container-div-superior-btn-return {
+    position: absolute;
+    right: 0;
+}
+/* FIN DEL DIV INFERIOR  */
+
+.container-div-inferior-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0;
+    width: 100%; /* Ancho inicial */
+    height: 10%; /* Altura inicial */
+    border: 1px solid black;
+    overflow: hidden;
+    transition: all 0.5s ease; /* Animación de transición */
+    border-top-left-radius: 70% 27px; /* Cambio de bordes para expandir hacia arriba */
+    border-top-right-radius: 70% 27px; /* Cambio de bordes para expandir hacia arriba */
+    box-shadow: 0px 27px 13px -20px rgba(255,255,255,1) inset;
+ background-color: #333; 
+    position: relative; /* Agregar posición relativa para el cambio de altura */
+    top: 0; /* Inicialmente en la parte superior */
+}
+
+.container-div-inferior-img img{
+    object-fit: cover;
+    justify-content: center;
+    width: 5%;
+    height: 5%;
+}
+
+.container-div-inferior-imagenes {
+    position: absolute;
+    top: 10px; /* Ajusta la posición vertical según sea necesario */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translateX(-50%); /* Alinear al centro horizontal */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-div-inferior-imagenes img {
+    width: 50px; /* Ajusta el tamaño de las imágenes */
+    height: 50px; /* Ajusta el tamaño de las imágenes */
+    margin: 5px; /* Espacio entre las imágenes */
+}
+
+.contenido{
+    display: none;
+}
+.inf-planos{
+    width: 50%;
+    height: 90px;
+/*     background-color: red;
+ */}
+.chat-user{
+    display: flex;
+    width: 100%;
+    height: 400px;
+/*     background-color: lightgreen;
+ */}
+
+.oculto {
+    display: none; /* Inicialmente oculto */
+    padding: 10px;
+    color: #333;
+}
+
+.inf, .user, .chat {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    color: #fff;
+    background-color: #333;
+    box-shadow: 2px -255px 255px -154px rgba(255,255,255,1) inset;
+}
+
+.inf {
+    box-shadow: 0px 27px 13px -20px rgba(255,255,255,1) inset;
+    background-color: #333; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user {
+    width: 100%;
+    height: 100%;
+/*     background-color: rgb(238, 144, 144);
+ */}
+
+.chat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /*  background-color: rgb(34, 32, 178); */
+ }
+
+.imagenes-user-oculto{
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+}
+.imagenes-user-oculto img{
+    width: 30%;
+    height: 30%;
+}
+
+.chat-chat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    border-radius: 30px;
+    box-shadow: 4px 8px 10px #ffffff;
+/*     background-color: #fff;
+ */}
+.chat-chat img{
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid #333;
+}
+
+.info-planos-lista {
+    color: #fff;
+    padding: 20px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.info-planos-lista i {
+    margin-left: 5px 0;
+}
+
+
+/* CARRUSEL */
+
+.carrusel{
+    width: 100%;
+    height: 80%;
+}
+
+.wrapper{
+    background-color: #363636;
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+.wrapper i{
+  top: 50%;
+  height: 44px;
+  width: 44px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1.15rem;
+  position: absolute;
+  text-align: center;
+  line-height: 44px;
+  background: #000000;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+.wrapper i:active{
+  transform: translateY(-50%) scale(0.9);
+}
+.wrapper i:hover{
+  background: lightgray;
+}
+.wrapper i:first-child{
+  left: -22px;
+  display: none;
+}
+.wrapper i:last-child{
+  right: -22px;
+}
+.wrapper .carousel{
+  font-size: 0px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+.carousel.dragging{
+  cursor: grab;
+  scroll-behavior: auto;
+}
+.carousel.dragging img{
+  pointer-events: none;
+}
+.carousel img{
+  height: 73vh;
+  object-fit: cover;
+  user-select: none;
+  margin-left: 14px;
+  width: calc(100% / 3);
+}
+.carousel img:first-child{
+  margin-left: 0px;
+}
+
+@media screen and (max-width: 900px) {
+  .carousel img{
+    width: calc(100% / 2);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .carousel img{
+    width: 100%;
+  }
+}
+
+
+/* Estilos del modal */
+.modal-3 {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 200px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+    text-align: center;
+  }
+  
+  .modal-content-3 {
+    margin: auto;
+    display: block;
+    width: 70%;
+    height: 70%;
+  }
+  
+  /* Estilos del botón de cerrar */
+  .close-3{
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: transparent;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  
+  .close-3:hover,
+  .close-3:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #myModal-3 {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    /* Agrega otros estilos como el tamaño, el fondo, etc. */
+  }
+  
+
+
+  /* ... Tu código CSS existente ... */
+
+/* Para tablet */
+@media screen and (max-width: 900px) {
+    .carousel img {
+      width: calc(100% / 2);
+    }
+    .container-planos-tercer-interfaz {
+        background-color: #363636;
+       height: 94.8vh;
+        overflow: hidden;
+    }
+    .container-div-inferior-img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 12px;
+        width: 100%; /* Ancho inicial */
+        height: 10%; /* Altura inicial */
+        border: 1px solid black;
+        border-bottom: none;
+        overflow: hidden;
+        transition: all 0.5s ease; /* Animación de transición */
+        border-top-left-radius: 70% 27px; /* Cambio de bordes para expandir hacia arriba */
+        border-top-right-radius: 70% 27px; /* Cambio de bordes para expandir hacia arriba */
+        box-shadow: 0px 27px 13px -20px rgba(255,255,255,1) inset;
+     background-color: #333; 
+        position: relative; /* Agregar posición relativa para el cambio de altura */
+        top: 0; /* Inicialmente en la parte superior */
+    }
+  }
+  
+
+
+  
+  /* Para dispositivos móviles */
+  @media screen and (max-width: 550px) {
+    .carousel img {
+      width: 100%;
+    }
+  
+    /* Ajustes para otros elementos según sea necesario */
+    .container-planos-tercer-interfaz {
+      height: auto;
+    }
+  
+    .container-div-superior-btn-return {
+      position: absolute;
+      right: 0;
+    }
+
+    .plan-header-left p {
+        position: relative;
+        top: 10px;
+        left: 10px;
+        font-size: 0.50rem;
+    }
+
+    .container-div-superior button{
+        background-color: transparent;
+        border: 2px solid #ffffff;
+        color: #fff;
+        font-size: 20px;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .container-div-superior{
+    box-shadow: 2px -17px 13px -20px rgba(255,255,255,1) inset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    width: 100%; /* Ancho inicial */
+    height: 10%; /* Altura inicial */
+    border-bottom-left-radius: 70% 17px; /* Cambio de bordes para expandir hacia arriba */
+    border-bottom-right-radius: 50% 17px; /* Cambio de bordes para expandir hacia arriba */
+
+}
+.container-planos-tercer-interfaz {
+    background-color: #363633;
+   height: 95vh;
+    overflow: hidden;
+}
+
+.info-planos-lista {
+    color: #fff;
+    padding: 20px;
+    font-size: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.info-planos-lista i {
+    margin-left: 5px 0;
+}
+
+.container-div-inferior-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 12px;
+    width: 100%; /* Ancho inicial */
+    height: 10%; /* Altura inicial */
+    border: 1px solid black;
+    border-bottom: none;
+    overflow: hidden;
+    transition: all 0.5s ease; /* Animación de transición */
+    border-top-left-radius: 70% 27px; /* Cambio de bordes para expandir hacia arriba */
+    border-top-right-radius: 70% 27px; /* Cambio de bordes para expandir hacia arriba */
+    box-shadow: 0px 27px 13px -20px rgba(255,255,255,1) inset;
+ background-color: #333; 
+    position: relative; /* Agregar posición relativa para el cambio de altura */
+    top: 0; /* Inicialmente en la parte superior */
+}
+
+/*  AQUI ESTAN LOS BOTONES DE CREAR Y REGRESAR  */
+.container-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 40px;
+    gap: 10px;
+}
+.container-btn button{
+    width: 3vh;
+    height: 3vh;
+    border-radius: 50%;
+    background: #fffefe;
+}
+
+
+/*  AQUI TERMINAN LOS BOTONES DE CREAR Y REGRESAR  */
+
+.modal-contenido-planos {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 90%;
+    height: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center;
+    border-radius: 30px;
+}
+
+  
+    /* Otros ajustes para elementos móviles */
+  }
+  
+  
+
+  

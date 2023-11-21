@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/b0d84ba12b.js" crossorigin="anonymous"></script>
+    <title>PLANOS</title>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="plan-header">
+        <div class="plan-header-left">
+            <a href="#" class="plan-button-link">
+                <img src="img/logoA.jpg" alt="Logo">
+            </a>
+            <p id="plan-bienvenida-header"> Bienvenida <b>Marta Caballero</b></p>
+            </div>
+            <div class="plan-header-center">
+                <h1>PLANOS</h1>
+            </div>
+            <div class="plan-header-right">
+                <input type="text" placeholder="Buscar..." name="buscador" id="plan-buscar">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+        </header>
+                <!-- FIN DEL HEADER -->
+                
+                <!-- ESTRUCTURA DE LOS PLANOS -->
+    <div class="container-planos">
+
+        <!--  SEGMENTO DONDE SE ENCUENTRAN LOS USARIOS  -->
+        <div class="container-users">
+            <div class="container-planos-users">
+                <img src="img/user-icon-on-transparent-background-free-png.webp" alt="">
+                <img src="img/user-icon-on-transparent-background-free-png.webp" alt="">
+                <img src="img/user-icon-on-transparent-background-free-png.webp" alt="">
+                <img src="img/user-icon-on-transparent-background-free-png.webp" alt="">
+                <img src="img/user-icon-on-transparent-background-free-png.webp" alt="">
+                <img src="img/user-icon-on-transparent-background-free-png.webp" alt="">
+            </div>
+        </div>
+
+        <!-- AQUI VA EL CONTENDOR DE MODULOS CREADOS -->
+        <div class="container-modulo-planos">
+            <a class="link-planos" href="planos.html"> 
+            <div class="container-modulo-carpeta">
+                    <article>
+                        <img class="close" src="img/close-removebg-preview (1).png" alt="">
+                        <img class="open" src="img/open-removebg-preview (4).png" alt="">
+                    </article>
+                    <p class="container-modulo-titulo">PRUEBA</p>
+                </div>
+            </a>
+        </div>
+        <!-- AQUI TERMINA EL CONTENDOR DE MODULOS CREADOS -->
+
+        <!-- VENTANA MODAL -->
+
+        <div id="myModal" class="modal" onclick="cerrarModalPorClic(event)">
+            <div class="modal-content" onclick="detenerPropagacion(event)">  
+                <div class="modal-content-btn-close"><span class="cerrar" onclick="cerrarModal()">&times;</span></div>
+                <div class="modal-content-inf"><p><b>10/07/2023 - 4:25pm</b></p></div>
+                <div class="modal-content-bienvenida"><p>Hola: <b>Jonathan Solis</b></p></div>
+                <div class="modal-content-input"><input id="nombreModulo" type="text" placeholder="Nombre de la carpeta"></div>
+                <div class="modal-content-btn"><button onclick="crearModuloEnModal()" class="container-btn-crearModulo"></i>Crear</button></div>
+            </div>
+        </div>
+
+        <!-- FIN DE LA VENTANA MODAL -->
+
+        <!-- AQUI ESTAN LOS BOTONES DE CREAR Y REGRESAR -->
+
+        <div class="container-btn">
+            <button class="container-btn-openmodal" onclick="abrirModal()" class="container-btn-crearModulo"><i class="fa-solid fa-plus"></i></button>
+            <button class="container-btn-return" class="cotainer-btn-regresar"><i class="fa-solid fa-rotate-left"></i></button>
+        </div>
+
+        <!-- AQUI TERMINA ESTAN LOS BOTONES DE CREAR Y REGRESAR -->
+
+        
+    </div>
+                <!-- FIN ESTRUCTURA DE LOS PLANOS -->
+<script src="script.js"></script>
+    
+</body>
+</html>
