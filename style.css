@@ -934,7 +934,7 @@ article:hover::before {
 }
 .container-planos-tercer-interfaz {
     background-color: #363633;
-   height: 95vh;
+   height: 94.1vh;
     overflow: hidden;
 }
 
@@ -957,7 +957,7 @@ article:hover::before {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: -15%;
+    margin-top: 12px;
     width: 100%; /* Ancho inicial */
     height: 10%; /* Altura inicial */
     border: 1px solid black;
@@ -1011,7 +1011,7 @@ article:hover::before {
     flex-direction: column;
     position: absolute;
     width: 90%;
-    height: 50%;
+    height: 40%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
